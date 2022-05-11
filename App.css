@@ -51,3 +51,12 @@ body {
   .restart:focus {
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
   }
+  .jogadas{
+      margin-left:10px;
+     padding: 10px 15px;
+    color: #fff;
+    background-color: #3CD014;
+    border-color: #272727;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
