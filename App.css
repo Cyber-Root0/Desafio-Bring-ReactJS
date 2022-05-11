@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    font-size: 20px;
+  }
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .square {
+    border: 1px solid #999;
+    float: left;
+    font-size: 40px;
+    height: 80px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 80px;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  .status, .restart {
+    margin-top: 10px;
+  }
+  
+  /** button styles **/
+  .restart {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #272727;
+    border-color: #272727;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  
+  .restart:active {
+    color: #fff;
+    background-color: #272727;
+    border-color: #272727;
+  }
+  
+  .restart:hover {
+    color: #fff;
+    background-color: #272727;
+    border-color: #272727;
+  }
+  
+  .restart:focus {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+  }
