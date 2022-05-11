@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="App.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <style>
       body{
         padding: 0px;
@@ -35,6 +35,9 @@
         padding: 8px;
 }
 tr:nth-child(even){background-color: #f2f2f2}
+    .disclaimer{
+        display:none;
+    }
     </style>
   </head>
   <body>
@@ -54,7 +57,7 @@ tr:nth-child(even){background-color: #f2f2f2}
             include_once 'api/mysql.php';
             $jogo=new BancoDados();
             $jogo->conectar();
-            $output=$jogo->select(true);
+            $output=$jogo->select(false);
             while($data=mysqli_fetch_array($output)){
               $id=$data['id'];
               $ganhador=$data['ganhador'];
