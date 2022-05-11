@@ -29,7 +29,7 @@ function Board () {
 
 
     const api = axios.create({
-    baseURL:'http://localhost'
+    baseURL:'http://www.tictactoe-bring.tk'
     });
 
     const resposta = api.get(`api/set.php?ganhador=${winner}&h=${squares}`);
@@ -43,6 +43,9 @@ function Board () {
     setIsX(true)
     setSquares(Array(9).fill(null))
     window.location.reload(false);
+  }
+  const visualizar = () => {
+    window.location.href='http://www.tictactoe-bring.tk/consultar.php';
   }
 
   const renderSquare = (i) => {
@@ -69,6 +72,8 @@ function Board () {
       </div>
       <div className="status">{status}</div>
       <button className="restart" onClick={handleRestart}>Reiniciar Jogo!</button>
+      <button className="jogadas" onClick={visualizar}>Visualizar Jogadas!</button>
+      
     </div>
   )
 }
