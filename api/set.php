@@ -27,28 +27,26 @@ function organizaHistorico($h){
 	$h_x="";
 	$h_o="";
 	for ($i=0;$i<count($str);$i++){
-		if (empty($str[$i])){
-		}else{
-			// execuxão de apenas OS CAMPOS Nao Nulos
-			if($str[$i]=="X"){
-				if (empty($h_x)){		
-					$h_x=$i;
-				}else{
-					$h_x=$h_x.",".$i;
-				}
+		if ($str[$i]==""){
 
-				//if ($i==0){
-				//$h_x=$i;
-				//}else{
-				//	$h_x=$h_x.",".$i;
-				//}
+		}else{
+			//se n estiver nulo os campos
+			if ($str[$i]=="X"){
 				
-			}else{
-				if (empty($h_o)){		
-					$h_o=$i;
+				if ($h_x!=null){
+					$h_x=$h_x.",".strval($i);
 				}else{
-					$h_o=$h_o.",".$i;
+					$h_x=strval($i);
 				}
+				
+
+			}elseif ($str[$i]=="O") {
+				if ($h_o!=null){
+					$h_o=$h_o.",".strval($i);
+				}else{
+					$h_o=strval($i);
+				}
+				
 			}
 		}
 	}
