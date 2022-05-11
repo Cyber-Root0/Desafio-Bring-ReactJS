@@ -5,7 +5,7 @@ Desafio Bring | ReactJS
 
 TicTacToe - Jogo da Velha com Designer Beautiful feito com React (Front End) e BackEnd(PHP, APIRest, MYSQL)
 ## INTERFACE:
-![Interface](https://raw.githubusercontent.com/Cyber-Root0/OsintWifi/main/Midia/Print.PNG)
+![Interface](https://raw.githubusercontent.com/Cyber-Root0/Desafio-Bring-ReactJS/main/img/bring.png)
 
 
 
