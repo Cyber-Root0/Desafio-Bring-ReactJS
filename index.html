@@ -53,25 +53,6 @@ tr:nth-child(even){background-color: #f2f2f2}
               <th> Historico (O)</th>
               <th>Historico (X)</th>
             </tr>
-            <?php
-            include_once 'api/mysql.php';
-            $jogo=new BancoDados();
-            $jogo->conectar();
-            $output=$jogo->select(false);
-            while($data=mysqli_fetch_array($output)){
-              $id=$data['id'];
-              $ganhador=$data['ganhador'];
-              $hx=$data['historico_x'];
-              $ho=$data['historico_o'];
-              echo "<tr>";
-              echo "<th>".$id."</th>";
-              echo "<th>".$ganhador."</th>";
-              echo "<th>".$hx."</th>";
-              echo "<th>".$ho."</th>";
-              echo "</tr>";
-            }
-
-            ?>
           </table>
           <p>4 Últimas jogadas</p>
 
